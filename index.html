@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 6 Years ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 30px;
+      color: #d63384;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-top: 60px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #ff99cc;
+      color: white;
+      padding: 14px 28px;
+      margin: 15px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #ff66a3;
+    }
+    .section {
+      display: none;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .letter {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: left;
+      color: #333;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    #start {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="start">
+    <h1>💖 Happy 6th Anniversary 💖</h1>
+    <p>Nov 22, 2019 ➤ Forever</p>
+    <button class="button" onclick="startReveal()">Click to Begin 🎁</button>
+  </div>
+
+  <div id="main" style="display:none;">
+    <div class="section">
+      <button class="button" onclick="toggleSection('gallery')">📷 View Photo Gallery</button>
+      <button class="button" onclick="toggleSection('letter')">💌 Read the Love Letter</button>
+      <button class="button" onclick="toggleSection('video')">🎥 Watch Our Video</button>
+    </div>
+
+    <div class="section" id="gallery">
+      <h2>Our Journey in Photos 📸</h2>
+      <img src="868E9D03-42B0-4E09-87AD-A96D17E8A0E1.jpeg" alt="Photo 1">
+      <img src="978AD144-1F26-430F-9BC4-C2B2B24C9147.jpeg" alt="Photo 2">
+      <img src="C692A465-E7F2-41E3-8CE7-757E54DD8A3B.jpeg" alt="Photo 3">
+      <img src="E7AF77CF-2AF2-41CB-BD45-2F638823E267.jpeg" alt="Photo 4">
+    </div>
+
+    <div class="section" id="letter">
+      <h2>💌 A Letter from Maya Pinky</h2>
+      <div class="letter">
+        <p>My Dearest Babie Panda,</p>
+        <p>Happy 6 years to us. Six whole years of love, laughter, learning, growing, and choosing each other again and again. I still can’t believe how lucky I am to call you mine.</p>
+        <p>You are my best friend, my safe place, my Iron Man, and the love of my life. Every single moment with you has been a beautiful part of this journey we’re building together, and I wouldn’t trade it for the world...</p>
+        <p>...Forever is a promise I’m keeping, because loving you is the easiest, most natural thing I’ve ever known.</p>
+        <p>With all my heart,<br>
+        Yours, always<br>
+        <strong>MAYA pinky.</strong></p>
+      </div>
+    </div>
+
+    <div class="section" id="video">
+      <h2>🎥 Memory Lane</h2>
+      <video controls>
+        <source src="memory_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function startReveal() {
+      document.getElementById("start").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+    function toggleSection(id) {
+      var section = document.getElementById(id);
+      if (section.style.display === "block") {
+        section.style.display = "none";
+      } else {
+        section.style.display = "block";
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
